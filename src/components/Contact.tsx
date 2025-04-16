@@ -88,7 +88,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="mailto:danielkleach@gmail.com"
+            href="mailto:danielleachweb@gmail.com"
             className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow group"
           >
             <div className="flex items-center gap-4 mb-3">

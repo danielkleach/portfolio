@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const projects = [
   {
@@ -82,23 +83,27 @@ export default function Projects() {
                     ))}
                   </div>
                 </div>
-                <div className="flex justify-between items-center mt-auto">
-                  <a
-                    href={project.liveUrl}
-                    className="text-teal-600 hover:text-teal-700 text-sm font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Preview →
-                  </a>
-                  <a
-                    href={project.codeUrl}
-                    className="border border-teal-600 text-teal-600 hover:bg-teal-50 text-sm font-medium px-4 py-1.5 rounded-md transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View Code
-                  </a>
+                <div className="mt-6 space-x-4">
+                  {project.liveUrl && project.liveUrl !== '#' && (
+                    <Link
+                      href={project.liveUrl}
+                      className="inline-block bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition-colors text-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live Preview
+                    </Link>
+                  )}
+                  {project.codeUrl && project.codeUrl !== '#' && (
+                    <Link
+                      href={project.codeUrl}
+                      className="inline-block border border-teal-600 text-teal-600 px-4 py-2 rounded-md hover:bg-teal-50 transition-colors text-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Code
+                    </Link>
+                  )}
                 </div>
               </div>
             </motion.div>

@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-50 py-6">
       <div className="container flex justify-between items-center text-sm text-gray-600">
-        <p>© 2025 daniel-leach.com. All rights reserved.</p>
+        <p>© 2025. All rights reserved.</p>
         <div className="flex gap-6">
           <Link 
             href="https://github.com/danielkleach" 

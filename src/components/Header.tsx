@@ -43,7 +43,6 @@ export default function Header() {
             <Link href="#about" className="text-sm text-gray-500 hover:text-gray-900">About</Link>
             <Link href="#projects" className="text-sm text-gray-500 hover:text-gray-900">Projects</Link>
             <Link href="#skills" className="text-sm text-gray-500 hover:text-gray-900">Skills</Link>
-            <Link href="#contact" className="text-sm text-gray-500 hover:text-gray-900">Contact</Link>
             <Link 
               href="#contact" 
               className={`text-sm px-4 py-2 rounded transition-colors ${
@@ -112,13 +111,6 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Skills
-                </Link>
-                <Link 
-                  href="#contact" 
-                  className="text-sm text-gray-500 hover:text-gray-900 py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Contact
                 </Link>
                 <Link 
                   href="#contact" 
