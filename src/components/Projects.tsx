@@ -59,7 +59,7 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="relative h-48 overflow-hidden bg-gray-100">
+              <div className="relative h-64 overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -68,7 +68,7 @@ export default function Projects() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
-              <div className="p-4 md:p-6 flex flex-col h-full">
+              <div className="p-4 md:p-6 flex flex-col h-full bg-gray-200">
                 <div>
                   <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
                   <p className="text-gray-500 text-sm mb-4">{project.description}</p>
@@ -76,7 +76,7 @@ export default function Projects() {
                     {project.tech.map(tech => (
                       <span
                         key={tech}
-                        className="bg-gray-50 text-gray-700 text-sm px-3 py-1 rounded-md"
+                        className="bg-white text-gray-700 text-sm px-3 py-1 rounded-md border border-gray-100"
                       >
                         {tech}
                       </span>
