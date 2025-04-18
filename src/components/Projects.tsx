@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const projects = [
   {
-    title: 'Church Management System',
+    title: 'ChapelWise - Church Management System',
     description: 'A platform to help churches manage their congregations.',
     image: '/images/projects/chapelwise.jpg',
     tech: ['Laravel', 'Livewire', 'PostgreSQL', 'TailwindCSS'],
