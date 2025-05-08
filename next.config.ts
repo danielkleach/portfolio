@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const securityHeaders = [
   {
     key: "Strict-Transport-Security",
-    value: "max-age=31536000; includeSubDomains",
+    value: "max-age=63072000; includeSubDomains; preload",
   },
   {
     key: "X-Content-Type-Options",
@@ -19,7 +19,7 @@ const securityHeaders = [
   },
   {
     key: "Referrer-Policy",
-    value: "no-referrer",
+    value: "no-referrer-when-downgrade",
   },
   {
     key: "Permissions-Policy",
@@ -28,6 +28,18 @@ const securityHeaders = [
   {
     key: "Content-Security-Policy",
     value: "default-src 'self'; script-src 'self'; object-src 'none'",
+  },
+  {
+    key: "Cross-Origin-Opener-Policy",
+    value: "same-origin",
+  },
+  {
+    key: "Cross-Origin-Resource-Policy",
+    value: "same-origin",
+  },
+  {
+    key: "Cross-Origin-Embedder-Policy",
+    value: "require-corp",
   },
 ];
 
