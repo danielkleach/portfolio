@@ -22,9 +22,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${jetbrainsMono.variable} scroll-smooth`}>
-      <head>
-      <meta name="vibesguardian-verification" content="gwsesLErcaFb4WDxwMRfQmQZIdCX0svN" />
-      </head>
       <body className={`${inter.className} bg-[#fafafa] text-gray-900 antialiased min-h-screen flex flex-col`}>
         <div className="flex-grow">
           {children}
