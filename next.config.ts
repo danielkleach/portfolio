@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+const isDev = process.env.NODE_ENV === 'development';
+
 const securityHeaders = [
   {
     key: "Strict-Transport-Security",
@@ -27,7 +29,9 @@ const securityHeaders = [
   },
   {
     key: "Content-Security-Policy",
-    value: "default-src 'self'; img-src 'self' https://vibesguard.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; object-src 'none'",
+    value: isDev
+      ? "default-src 'self'; img-src 'self' https://vibesguard.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; object-src 'none'"
+      : "default-src 'self'; img-src 'self' https://vibesguard.com; script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; object-src 'none'",
   },
   {
     key: "Cross-Origin-Opener-Policy",

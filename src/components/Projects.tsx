@@ -12,6 +12,14 @@ const projects = [
     tech: ['Laravel', 'Livewire', 'PostgreSQL', 'TailwindCSS'],
     liveUrl: 'https://chapelwise.com',
     codeUrl: '#'
+  },
+  {
+    title: 'VibesGuard - Security Scanner for Websites',
+    description: 'A scanning tool that checks for security vulnerabilities in apps.',
+    image: '/images/projects/vibesguard.jpg',
+    tech: ['Laravel', 'React', 'MySQL', 'TailwindCSS'],
+    liveUrl: 'https://vibesguard.com',
+    codeUrl: '#'
   }
 ]
 

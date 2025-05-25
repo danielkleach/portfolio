@@ -106,7 +106,7 @@ export default function About() {
                 <div className="relative pl-6 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-teal-600 before:rounded-full">
                   <h4 className="font-semibold">Freelance Engineer | AI Manager</h4>
                   <p className="text-gray-600 text-sm md:text-base">Self • Mar 2025 - Present</p>
-                  <p className="mt-2 text-sm md:text-base">Currently building a SaaS platform to help churches manage their congregations.</p>
+                  <p className="mt-2 text-sm md:text-base">Currently building a SaaS platform to help &quot;vibe coders&quot; secure their apps.</p>
                 </div>
                 <div className="relative pl-6 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-teal-600 before:rounded-full">
                   <h4 className="font-semibold">Software Engineer II</h4>
