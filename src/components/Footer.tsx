@@ -6,17 +6,24 @@ import Image from 'next/image'
 export default function Footer() {
   return (
     <footer className="bg-gray-50 py-6">
-      <div className="container flex justify-between items-center text-sm text-gray-600">
-        <div className="flex items-center gap-4">
-          <p>© 2025. All rights reserved.</p>
-          <Image
-            src="https://vibesguard.com/badge/4dc47b2b-cac4-4d87-8cb5-18780503f996"
-            alt="VibesGuard Security Badge"
-            width={80}
-            height={24}
-            className="h-6 w-auto"
-            unoptimized
-          />
+      <div className="container relative flex justify-between items-center text-sm text-gray-600">
+        <p>© 2025. All rights reserved.</p>
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <a
+            href="https://vibesguard.com/site/4dc47b2b-cac4-4d87-8cb5-18780503f996/status"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="https://vibesguard.com/badge/4dc47b2b-cac4-4d87-8cb5-18780503f996"
+              alt="VibesGuard Security Badge"
+              width={80}
+              height={24}
+              className="h-12 w-auto"
+              crossOrigin="anonymous"
+              unoptimized
+            />
+          </a>
         </div>
         <div className="flex gap-6">
           <Link 
