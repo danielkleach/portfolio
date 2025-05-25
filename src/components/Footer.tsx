@@ -1,12 +1,23 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
     <footer className="bg-gray-50 py-6">
       <div className="container flex justify-between items-center text-sm text-gray-600">
-        <p>© 2025. All rights reserved.</p>
+        <div className="flex items-center gap-4">
+          <p>© 2025. All rights reserved.</p>
+          <Image
+            src="https://vibesguard.com/badge/4dc47b2b-cac4-4d87-8cb5-18780503f996"
+            alt="VibesGuard Security Badge"
+            width={80}
+            height={24}
+            className="h-6 w-auto"
+            unoptimized
+          />
+        </div>
         <div className="flex gap-6">
           <Link 
             href="https://github.com/danielkleach" 
