@@ -45,7 +45,7 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["placehold.co", "images.unsplash.com"],
+    domains: ["placehold.co", "images.unsplash.com", "vibesguard.com"],
   },
   async headers() {
     return [
