@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function About() {
   return (
-    <section id="about" className="pt-24 md:pt-28 pb-24 md:pb-28 bg-[#fafafa]">
+    <section id="about" className="pt-16 md:pt-20 pb-8 md:pb-12 bg-[#fafafa]">
       <div className="container px-4 md:px-0">
         <div className="grid grid-cols-1 md:grid-cols-[400px_1fr] gap-8 md:gap-16">
           <div>

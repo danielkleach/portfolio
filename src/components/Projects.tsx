@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
 const projects = [
   {
@@ -10,7 +11,7 @@ const projects = [
     description: 'A platform to help churches manage their congregations.',
     image: '/images/projects/chapelwise.jpg',
     tech: ['Laravel', 'Livewire', 'PostgreSQL', 'TailwindCSS'],
-    liveUrl: 'https://chapelwise.com',
+    liveUrl: '#',
     codeUrl: '#'
   },
   {
@@ -20,12 +21,30 @@ const projects = [
     tech: ['Laravel', 'React', 'MySQL', 'TailwindCSS'],
     liveUrl: 'https://vibesguard.com',
     codeUrl: '#'
+  },
+  {
+    title: 'Christian Brothers Services LLC',
+    description: 'Website for a local construction business.',
+    image: '/images/projects/christian-brothers.jpg',
+    tech: ['Next.js', 'TailwindCSS', 'TypeScript'],
+    liveUrl: 'https://christianbrothersservicesllc.com',
+    codeUrl: '#'
   }
 ]
 
 export default function Projects() {
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null)
+
+  const openImageOverlay = (src: string, alt: string) => {
+    setSelectedImage({ src, alt })
+  }
+
+  const closeImageOverlay = () => {
+    setSelectedImage(null)
+  }
+
   return (
-    <section id="projects" className="pt-24 md:pt-28 pb-24 md:pb-28 bg-[#fafafa]">
+    <section id="projects" className="pt-16 md:pt-20 pb-8 md:pb-12 bg-[#fafafa]">
       <div className="container px-4 md:px-0">
         <div className="relative mb-6 md:mb-8">
           <motion.h2
@@ -67,12 +86,15 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="relative h-64 overflow-hidden">
+              <div 
+                className="relative h-64 overflow-hidden cursor-pointer group"
+                onClick={() => openImageOverlay(project.image, project.title)}
+              >
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
@@ -118,6 +140,43 @@ export default function Projects() {
           ))}
         </div>
       </div>
+
+      {/* Image Overlay */}
+      {selectedImage && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4"
+          onClick={closeImageOverlay}
+        >
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="relative max-w-4xl max-h-[90vh] w-full h-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              fill
+              className="object-contain"
+              sizes="90vw"
+            />
+            <button
+              onClick={closeImageOverlay}
+              className="absolute top-4 right-4 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-colors"
+              aria-label="Close image"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </motion.div>
+        </motion.div>
+      )}
     </section>
   )
 } 

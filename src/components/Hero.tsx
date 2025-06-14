@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <section className="min-h-[calc(100vh-5rem)] flex items-center bg-[#fafafa] py-12 md:py-16">
+    <section className="min-h-[calc(100vh-5rem)] flex items-center bg-[#fafafa] pt-12 md:pt-16 pb-8 md:pb-12">
       <div className="container mx-auto px-4 w-full">
         <div className="flex flex-col md:grid md:grid-cols-[1fr_450px] items-center gap-8 md:gap-12 w-full">
           <div className="order-2 md:order-1 w-full">

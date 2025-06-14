@@ -23,7 +23,7 @@ const skillSections = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="pt-24 md:pt-28 pb-24 md:pb-28 bg-[#fafafa]">
+    <section id="skills" className="pt-16 md:pt-20 pb-8 md:pb-12 bg-[#fafafa]">
       <div className="container">
         <div className="grid grid-cols-[400px_1fr] gap-16">
           <div>
