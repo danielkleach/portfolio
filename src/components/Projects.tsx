@@ -8,26 +8,38 @@ import { useState } from 'react'
 const projects = [
   {
     title: 'ChapelWise - Church Management System',
-    description: 'A platform to help churches manage their congregations.',
+    description: 'A platform to help churches manage their congregations. Feature list includes management of members, events, volunteering, budgets, prayer requests, sermons, and more.',
     image: '/images/projects/chapelwise.jpg',
     tech: ['Laravel', 'Livewire', 'PostgreSQL', 'TailwindCSS'],
     liveUrl: '#',
-    codeUrl: '#'
+    codeUrl: '#',
+    status: 'Defunct',
+    shutdownReason: 'Project discontinued due to lack of user adoption. Turns out it is hard to move churches to technology.'
   },
   {
     title: 'VibesGuard - Security Scanner for Websites',
-    description: 'A scanning tool that checks for security vulnerabilities in apps.',
+    description: 'A scanning tool that checks for security vulnerabilities in apps. Use add the URL to their website and do a security/vulnerability scan to find obvious issues that need resolved.',
     image: '/images/projects/vibesguard.jpg',
     tech: ['Laravel', 'React', 'MySQL', 'TailwindCSS'],
-    liveUrl: 'https://vibesguard.com',
-    codeUrl: '#'
+    liveUrl: '#',
+    codeUrl: '#',
+    status: 'Defunct',
+    shutdownReason: 'Shut down after competition moved in and saturated the market. I have another app idea that may end up absorbing this one in the future.'
   },
   {
     title: 'Christian Brothers Services LLC',
-    description: 'Website for a local construction business.',
+    description: 'Website for a local construction business. Not many integrations or bells and whistles, but was fun to work in a different technology (Next.js).',
     image: '/images/projects/christian-brothers.jpg',
     tech: ['Next.js', 'TailwindCSS', 'TypeScript'],
     liveUrl: 'https://christianbrothersservicesllc.com',
+    codeUrl: '#'
+  },
+  {
+    title: 'Undisclosed (In Progress)',
+    description: 'Will be filled in once I am closer to release.',
+    image: '',
+    tech: ['Laravel', 'React', 'PostgreSQL', 'TailwindCSS'],
+    liveUrl: '#',
     codeUrl: '#'
   }
 ]
@@ -88,19 +100,41 @@ export default function Projects() {
             >
               <div 
                 className="relative h-64 overflow-hidden cursor-pointer group"
-                onClick={() => openImageOverlay(project.image, project.title)}
+                onClick={() => project.image && openImageOverlay(project.image, project.title)}
               >
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                ) : (
+                  <div className="flex items-center justify-center w-full h-full bg-gray-100">
+                    <Image
+                      src="/window.svg"
+                      alt="Placeholder"
+                      width={80}
+                      height={80}
+                      className="opacity-40"
+                    />
+                  </div>
+                )}
               </div>
               <div className="p-4 md:p-6 flex flex-col h-full bg-gray-200">
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
+                  <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+                    {project.title}
+                    {project.status && (
+                      <span className="ml-2 px-2 py-0.5 rounded bg-gray-400 text-white text-xs font-medium opacity-80">
+                        {project.status}
+                      </span>
+                    )}
+                  </h3>
+                  {project.shutdownReason && (
+                    <p className="text-xs italic text-gray-500 mb-2">{project.shutdownReason}</p>
+                  )}
                   <p className="text-gray-500 text-sm mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech.map(tech => (

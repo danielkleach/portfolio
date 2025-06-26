@@ -9,7 +9,7 @@ const skillSections = [
   },
   {
     title: 'Backend',
-    skills: ['Laravel','Node.js', 'Python', 'REST APIs', 'Third-party APIs']
+    skills: ['Laravel', 'Next.js', 'Node.js', 'Python', 'REST APIs', 'Third-party APIs']
   },
   {
     title: 'Database',
@@ -17,7 +17,7 @@ const skillSections = [
   },
   {
     title: 'DevOps & Tools',
-    skills: ['Git', 'Docker', 'CI/CD', 'Jest', 'Webpack']
+    skills: ['Git', 'Docker', 'Postman', 'Cursor']
   }
 ]
 
