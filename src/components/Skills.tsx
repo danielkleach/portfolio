@@ -25,7 +25,7 @@ export default function Skills() {
   return (
     <section id="skills" className="pt-16 md:pt-20 pb-8 md:pb-12 bg-[#fafafa]">
       <div className="container">
-        <div className="grid grid-cols-[400px_1fr] gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-8 lg:gap-16">
           <div>
             <div className="relative mb-8">
               <motion.h2
@@ -68,7 +68,7 @@ export default function Skills() {
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
             {skillSections.map((section, sectionIndex) => (
               <motion.div
                 key={section.title}
