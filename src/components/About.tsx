@@ -104,19 +104,19 @@ export default function About() {
               <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6">Work Experience</h3>
               <div className="space-y-6 md:space-y-8">
                 <div className="relative pl-6 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-teal-600 before:rounded-full">
+                  <h4 className="font-semibold">Sr. Software Engineer</h4>
+                  <p className="text-gray-600 text-sm md:text-base">Kleer and Membersy • Jul 2025 - Present</p>
+                  <p className="mt-2 text-sm md:text-base">Working with a great team to provide subscription-based membership plans to dentists and their patients.</p>
+                </div>
+                <div className="relative pl-6 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-teal-600 before:rounded-full">
                   <h4 className="font-semibold">Freelance Engineer | AI Manager</h4>
-                  <p className="text-gray-600 text-sm md:text-base">Self • Mar 2025 - Present</p>
+                  <p className="text-gray-600 text-sm md:text-base">Self • Mar 2025 - Jul 2025</p>
                   <p className="mt-2 text-sm md:text-base">Currently building SaaS platforms and taking on freelance projects.</p>
                 </div>
                 <div className="relative pl-6 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-teal-600 before:rounded-full">
                   <h4 className="font-semibold">Software Engineer II</h4>
                   <p className="text-gray-600 text-sm md:text-base">RXMG • Sept 2019 - Feb 2025</p>
                   <p className="mt-2 text-sm md:text-base">Worked on an amazing team building out email marketing software solutions.</p>
-                </div>
-                <div className="relative pl-6 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-teal-600 before:rounded-full">
-                  <h4 className="font-semibold">PHP Developer</h4>
-                  <p className="text-gray-600 text-sm md:text-base">Knight Interactive Inc. • Aug 2018 - Sept 2019</p>
-                  <p className="mt-2 text-sm md:text-base">Collaborated in an agile team to build and launch a warehouse management platform.</p>
                 </div>
               </div>
             </motion.div>
