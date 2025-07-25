@@ -33,14 +33,6 @@ const projects = [
     tech: ['Next.js', 'TailwindCSS', 'TypeScript'],
     liveUrl: 'https://christianbrothersservicesllc.com',
     codeUrl: '#'
-  },
-  {
-    title: 'Undisclosed (In Progress)',
-    description: 'Will be filled in once I am closer to release.',
-    image: '',
-    tech: ['Laravel', 'React', 'PostgreSQL', 'TailwindCSS'],
-    liveUrl: '#',
-    codeUrl: '#'
   }
 ]
 
