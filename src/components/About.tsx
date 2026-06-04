@@ -105,7 +105,7 @@ export default function About() {
               <div className="space-y-6 md:space-y-8">
                 <div className="relative pl-6 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-teal-600 before:rounded-full">
                   <h4 className="font-semibold">Sr. Software Engineer</h4>
-                  <p className="text-gray-600 text-sm md:text-base">Kleer and Membersy • Jul 2025 - Present</p>
+                  <p className="text-gray-600 text-sm md:text-base">Clerri • Jul 2025 - Present</p>
                   <p className="mt-2 text-sm md:text-base">Working with a great team to provide subscription-based membership plans to dentists and their patients.</p>
                 </div>
                 <div className="relative pl-6 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-teal-600 before:rounded-full">

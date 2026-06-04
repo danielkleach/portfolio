@@ -33,6 +33,14 @@ const projects = [
     tech: ['Next.js', 'TailwindCSS', 'TypeScript'],
     liveUrl: 'https://christianbrothersservicesllc.com',
     codeUrl: '#'
+  },
+  {
+    title: 'All American Home Services',
+    description: 'Marketing site for a Taylors, SC plumbing and home services company serving the Upstate. Hero-focused layout with service highlights, financing partner integration, and a patriotic color scheme.',
+    image: '/images/projects/all-american.jpg',
+    tech: ['Next.js', 'TailwindCSS', 'TypeScript'],
+    liveUrl: 'https://aahomesvc.com',
+    codeUrl: '#'
   }
 ]
 
