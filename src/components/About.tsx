@@ -88,7 +88,7 @@ export default function About() {
                 Hello! I&apos;m Daniel, a software engineer with a passion for creating clean, efficient, and user-friendly applications. My journey in tech began when I received my first computer at 12, and I&apos;ve been hooked ever since.
               </p>
               <p>
-                With nearly 10 years of professional experience, I specialize in backend development with Laravel, crafting robust and scalable web applications. I&apos;m particularly interested in API design, database optimization, and building reliable microservices.
+                With over 10 years of professional experience, I specialize in backend development with Laravel, crafting robust and scalable web applications. I&apos;m particularly interested in API design, database optimization, and building reliable microservices.
               </p>
               <p>
                 When I&apos;m not coding, you can find me working in the garden, spending time with my family, or reading up on the latest AI advancements.
@@ -111,7 +111,7 @@ export default function About() {
                 <div className="relative pl-6 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-teal-600 before:rounded-full">
                   <h4 className="font-semibold">Freelance Engineer | AI Manager</h4>
                   <p className="text-gray-600 text-sm md:text-base">Self • Mar 2025 - Jul 2025</p>
-                  <p className="mt-2 text-sm md:text-base">Currently building SaaS platforms and taking on freelance projects.</p>
+                  <p className="mt-2 text-sm md:text-base">Building SaaS platforms and taking on freelance projects.</p>
                 </div>
                 <div className="relative pl-6 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-teal-600 before:rounded-full">
                   <h4 className="font-semibold">Software Engineer II</h4>

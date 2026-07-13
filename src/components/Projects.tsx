@@ -7,6 +7,14 @@ import { useState } from 'react'
 
 const projects = [
   {
+    title: 'RequestHarbor - Client Request Portal',
+    description: 'A branded client portal for agencies, contractors, and consultancies. Send one secure link for file uploads, answers, and sign-offs—no client account needed. Team dashboard for triage, templates, reminders, and an audit-ready timeline.',
+    image: '/images/projects/request-harbor.jpg',
+    tech: ['Laravel', 'Livewire', 'MySQL', 'TailwindCSS'],
+    liveUrl: 'https://requestharbor.com',
+    codeUrl: '#'
+  },
+  {
     title: 'ChapelWise - Church Management System',
     description: 'A platform to help churches manage their congregations. Feature list includes management of members, events, volunteering, budgets, prayer requests, sermons, and more.',
     image: '/images/projects/chapelwise.jpg',
@@ -71,22 +79,7 @@ export default function Projects() {
           </motion.h2>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="bg-gray-50 border border-gray-200 rounded-lg p-4 md:p-6 mb-8 text-sm md:text-base"
-        >
-          <div className="flex items-start gap-3">
-            <svg className="w-6 h-6 text-teal-600 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <p className="text-gray-600">
-              While I have a limited number of public projects to showcase (for now...), I&apos;ve spent the past few years building complex internal systems and applications for various companies. These projects, while not publicly accessible, have involved extensive work with modern tech stacks and challenging business problems. Feel free to check back as I will be adding more projects soon!
-            </p>
-          </div>
-        </motion.div>
+        
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project, index) => (
